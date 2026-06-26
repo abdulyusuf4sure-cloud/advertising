@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>World Advertising | Promote Your Business Everywhere</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1>World Advertising</h1>
+        <p>Advertise your business across every social media platform.</p>
+      </div>
+      <nav class="navigation">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#users">Users</a>
+        <a href="#admin" id="admin-link">Admin</a>
+        <a href="#upload">Upload</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#contact">Contact</a>
+        <a href="#" id="signout-link" onclick="signOutUser()" style="display:inline-block;margin-left:8px;">Sign out</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <div>
+          <span class="eyebrow">Grow your reach</span>
+          <h2>One platform to advertise your business on every social channel.</h2>
+          <p>Launch campaigns, schedule posts, track performance, and connect with customers on Facebook, Instagram, TikTok, LinkedIn, Twitter, and more.</p>
+          
+          <a class="btn-primary" href="#contact">Start Advertising</a>
+        </div>
+        <div class="hero-image">
+          <div class="card">
+            <h3>Featured Benefits</h3>
+            <ul>
+              <li>Smart campaign builder</li>
+              <li>Targeted audience reach</li>
+              <li>Analytics in real time</li>
+              <li>All social platforms supported</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="admin-panel" class="admin-panel" style="display:none;">
+      <div class="container">
+        <h3>Pending Payments (Admin)</h3>
+        <div class="users-card">
+          <p>Approve payments to allow advertisers to go live.</p>
+          <ul id="pending-list" class="user-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <div class="container">
+        <h3>Powerful features built for small businesses</h3>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h4>Cross-platform campaigns</h4>
+            <p>Create a single ad campaign and publish it to multiple social channels at once.</p>
+          </article>
+          <article class="feature-card">
+            <h4>Post scheduling</h4>
+            <p>Plan your content calendar, post automatically, and keep your business visible 24/7.</p>
+          </article>
+          <article class="feature-card">
+            <h4>Analytics dashboard</h4>
+            <p>Monitor clicks, engagement, and conversions across networks in one dashboard.</p>
+          </article>
+          <article class="feature-card">
+            <h4>Audience targeting</h4>
+            <p>Reach people by interest, location, age, and behavior with smart targeting tools.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="pricing" class="pricing-section">
+      <div class="container">
+        <h3>Pricing</h3>
+        <div class="pricing-card">
+          <h4>Starter Advertising Package</h4>
+          <p>Starter Advertising Package — contact us for details.</p>
+          <ul>
+            <li>Campaign setup for any social platform</li>
+            <li>Basic targeting and scheduling</li>
+            <li>Performance snapshot after launch</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="users" class="users-section">
+      <div class="container">
+        <h3>People using this website</h3>
+        <div class="users-card">
+          <p>See the advertisers who are using World Advertising to grow their business.</p>
+          <ul id="user-list" class="user-list">
+            <li class="user-item">Amina Bello — Fashion Boutique</li>
+            <li class="user-item">Emeka John — Mobile Repairs</li>
+            <li class="user-item">Hassan Ali — Food Delivery</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="upload" class="upload-section">
+      <div class="container">
+        <h3>Upload Your Business Images</h3>
+        <div class="upload-card">
+          <p>Select up to six images to showcase your business. These photos help us understand your brand and design better ads.</p>
+          <input id="image-input" type="file" accept="image/*" multiple />
+          <div id="preview-grid" class="preview-grid"></div>
+          <button id="upload-button" class="btn-primary" type="button">Upload Images</button>
+          <p id="upload-status" class="form-status"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+      <div class="container">
+        <div class="split-layout">
+          <div>
+            <h3>How it works</h3>
+            <ol>
+              <li><strong>Describe your business:</strong> Tell us your goal and preferred social channels.</li>
+              <li><strong>Design your campaign:</strong> Choose templates, messages, and audience targeting.</li>
+              <li><strong>Launch and measure:</strong> Publish your ads and follow performance in real time.</li>
+            </ol>
+          </div>
+          <div class="stats-card">
+            <h4>Why business owners choose World Advertising</h4>
+            <p>Save time, reach more customers, and grow your brand with easy social advertising tools.</p>
+            <ul>
+              <li>30% faster campaign setup</li>
+              <li>One dashboard for all networks</li>
+              <li>Built for service providers, shops, and creators</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <div class="container contact-box">
+        <div>
+          <h3>Ready to advertise your business?</h3>
+          <p>Tell us your business name and where you want to promote it. We’ll help you launch a winning campaign.</p>
+          <p>Or send a message directly to <a href="mailto:abdulyusuf4sure@gmail.com">abdulyusuf4sure@gmail.com</a>.</p>
+        </div>
+        <form id="contact-form">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your name" required />
+
+          <label for="business">Business</label>
+          <input type="text" id="business" name="business" placeholder="Your business name" required />
+
+          <label for="platforms">Preferred platforms</label>
+          <input type="text" id="platforms" name="platforms" placeholder="Facebook, Instagram, TikTok..." required />
+
+          <h4>Payment (required)</h4>
+          <label for="account">Account number (OPAY)</label>
+          <input type="text" id="account" name="account" value="8160354672" readonly />
+
+          <label for="amount">Amount paid (₦)</label>
+          <input type="number" id="amount" name="amount" placeholder="2000" min="2000" />
+
+          <label for="paymentRef">Payment reference</label>
+          <input type="text" id="paymentRef" name="paymentRef" placeholder="Transaction reference (optional)" />
+
+          <label for="receipt">Receipt (upload image of payment)</label>
+          <input type="file" id="receipt" name="receipt" accept="image/*" />
+
+          <p id="payment-message" class="form-status">You must pay ₦2,000 into the account above and upload a receipt. Payments are verified by admin.</p>
+
+          <button id="submit-payment" class="btn-secondary" type="button">Submit payment for verification</button>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your goals"></textarea>
+
+          <button id="submit-button" class="btn-primary" type="submit">Send Request</button>
+          <p id="form-status" class="form-status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>&copy; 2026 World Advertising. Advertising for people and businesses on every social media platform.</p>
+    </div>
+  </footer>
+
+  <!-- Firebase SDK (compat), optional config: copy auth-config.example.js -> auth-config.js -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+  <script src="auth-config.js" defer></script>
+  <script src="auth.js" defer></script>
+  <script>
+    // If Firebase config is provided, enforce login before using site
+    window.addEventListener('load', () => {
+      try { requireAuthRedirect(); } catch (e) { /* no-op if not configured */ }
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>

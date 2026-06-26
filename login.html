@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Login — World Advertising</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container" style="padding:3rem 0">
+    <div class="card" style="max-width:520px;margin:0 auto;">
+      <h2>Sign in to World Advertising</h2>
+      <p>Use Google or Facebook to sign in.</p>
+
+      <!-- Firebase SDKs (compat) -->
+      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+      <script src="auth-config.js" defer></script>
+      <script src="auth.js" defer></script>
+
+      <div style="display:grid;gap:0.75rem;margin-top:1.25rem">
+        <button class="btn-primary" onclick="googleSignIn()">Sign in with Google</button>
+        <button class="btn-secondary" onclick="facebookSignIn()">Sign in with Facebook</button>
+      </div>
+
+      <p style="margin-top:1rem">Or <a href="signup.html">create an account</a>.</p>
+    </div>
+  </main>
+</body>
+</html>
